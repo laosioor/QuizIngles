@@ -1,0 +1,164 @@
+body {
+    overflow: hidden;
+}
+.question {
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
+.question {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.disco {
+    width: 40rem;
+    cursor: pointer;
+    margin: 2rem;
+    border-radius: 100%;
+}
+
+.album {
+    width: 30rem;
+    margin: 2rem;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(0, 0, 0, 0.5);
+}
+
+.cena {
+    width: 60rem;
+    margin: 3rem;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(0, 0, 0, 0.5);
+}
+
+@keyframes gira {
+    to {transform: rotate(360deg);}
+}
+
+.choice-container {
+    display: flex;
+    margin-bottom: 2.5rem;
+    width: 100%;
+    font-size: 1.8rem;
+    border: 0.1rem solid rgb(20, 212, 134, 0.25);
+    background-color: #323232;
+    animation: fadeInAnimation ease 2s;
+}
+  
+.choice-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(20, 212, 134, 0.5);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
+  
+.choice-prefix {
+    padding: 1.5rem 2.5rem;
+    background-color: #14d476;
+    color: white;
+}
+  
+.choice-text {
+    padding: 1.5rem;
+    width: 100%;
+    color: white;
+}
+  
+.correct {
+    background-color: #28a745;
+}
+  
+.incorrect {
+    background-color: #dc3545;
+}
+
+.modal {
+    position: fixed;
+    z-index: -90;
+}
+
+.erradoImg, .certoImg {
+    opacity: 0%;
+    margin-bottom: 15rem;
+}
+
+.hud {
+    line-height: 0px;
+    position: absolute;
+    left: 2rem;
+    top: 2rem;
+    width: auto;
+}
+
+.jogTexto {
+    font-size: 2.4rem;
+    padding-right: 0.3rem;
+    padding-left: 0.3rem;
+}
+
+.rodada, .dificuldade {
+    line-height: 10px;
+}
+
+#dificuldade, #rodada {
+    font-size: 2.2rem
+}
+
+#questao {
+    text-align: center;
+    font-size: 2.8rem;
+}
+
+#tanto, #deTanto {
+    word-wrap: unset;
+    text-align: center;
+    font-size: 2.8rem;
+    color: white;
+}
+
+@keyframes aparece {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+.certo-errado {
+    grid-area: certo-errado;
+    justify-content: center;
+}
+
+.certo img, .errado img {
+    width: 7rem;
+}
+
+.certo, .errado {
+    transition: transform 250ms;
+}
+
+.certo {
+    margin-right: 2rem;
+}
+
+.errado {
+    margin-left: 2rem;
+}
+
+.certo:hover, .errado:hover {
+    transform: scale(1.1);
+}
